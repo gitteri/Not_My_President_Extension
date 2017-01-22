@@ -10,6 +10,7 @@ function replaceDT() {
         replaceDT: false
       }, function(options) {
         if (options.replaceDT) {
+            htmlReplace();
             window.setInterval(function() {
                 htmlReplace(options.wordDT);
             }, 5000);

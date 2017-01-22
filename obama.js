@@ -191,8 +191,12 @@ var WikiquoteApi = (function() {
   return wqa;
 }());
 
+function openOptions() {
+  chrome.tabs.create({ 'url': 'chrome://extensions/?options=' + chrome.runtime.id });
+}
 
 function getQuote() {
+  document.getElementById('options').addEventListener('click', openOptions);
   WikiquoteApi.getRandomQuote('Barack Obama', 
     function(newQuote) { setQuoteAs(WikiquoteApi.capitalizeString(newQuote.quote)); }, 
     function(msg){ setQuoteAs('Yes we can.'); }

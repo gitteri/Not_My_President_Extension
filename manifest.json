@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "Not My President",
   "description": "This extension takes us to a better time",
-  "version": "1.3",
+  "version": "1.4",
   "background": {
     "scripts": ["bg.js"]
   },
@@ -19,6 +19,7 @@
     }
   ],
   "permissions": [
+    "tabs",
     "storage",
     "webRequest",
     "https://en.wikiquote.org/*",

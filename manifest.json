@@ -1,8 +1,9 @@
 {
   "manifest_version": 2,
   "name": "Not My President",
-  "description": "This extension takes us to a better time",
-  "version": "1.4",
+  "description": "Replace Donald Trump's name on any website with anything you wish. Randomly generate an Obama quote. Redirect whitehouse.gov visits.",
+  "version": "1.12",
+  "icons": { "128": "sad.png" },
   "background": {
     "scripts": ["bg.js"]
   },

@@ -180,12 +180,7 @@ var WikiquoteApi = (function() {
    * Capitalize the first letter of each word
    */
   wqa.capitalizeString = function(input) {
-    var inputArray = input.split(' ');
-    var output = [];
-    for(s in inputArray) {
-      output.push(inputArray[s].charAt(0).toUpperCase() + inputArray[s].slice(1));
-    }
-    return output.join(' ');
+    return input.charAt(0).toUpperCase() + input.slice(1);
   };
 
   return wqa;

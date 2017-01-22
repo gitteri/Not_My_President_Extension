@@ -7,10 +7,10 @@ if (document.readyState === 'complete' || document.readyState === 'interactive')
 function replaceDT() {
     chrome.storage.sync.get({
         wordDT: 'Not My President',
-        replaceDT: false
+        replaceDT: true
       }, function(options) {
         if (options.replaceDT) {
-            htmlReplace();
+            htmlReplace(options.wordDT);
             window.setInterval(function() {
                 htmlReplace(options.wordDT);
             }, 5000);
@@ -31,6 +31,7 @@ function htmlReplace(replace) {
                 var text = node.nodeValue;
                 var replacedText = text.replace(/donald\sjohn\strump/gi, replace);
                 replacedText = replacedText.replace(/donald\sj[.]\strump/gi, replace);
+                replacedText = replacedText.replace(/donald\sj\strump/gi, replace);
                 replacedText = replacedText.replace(/donald\strump/gi, replace);
                 replacedText = replacedText.replace(/Trump/g, replace);
                 replacedText = replacedText.replace(/president\strump/gi, 'president ' + replace);

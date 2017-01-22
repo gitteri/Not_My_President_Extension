@@ -194,13 +194,13 @@ var WikiquoteApi = (function() {
 
 function getQuote() {
   WikiquoteApi.getRandomQuote('Barack Obama', 
-    function(newQuote) { setQuoteAs(newQuote.quote); }, 
+    function(newQuote) { setQuoteAs(WikiquoteApi.capitalizeString(newQuote.quote)); }, 
     function(msg){ setQuoteAs('Yes we can.'); }
   );
 }
 
 function setQuoteAs(quote) {
-  document.getElementById('quote').innerHTML = 'Obama: ' + quote;
+  document.getElementById('quote').innerHTML = '<p>"' + quote + '"</p><p style="text-align: right;width:100%;"><b>- President Barack Obama</b></p>';
 }
 
 document.addEventListener('DOMContentLoaded', getQuote, false);

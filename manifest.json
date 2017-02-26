@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "Not My President",
   "description": "Replace Donald Trump's name on any website with anything you wish. Randomly generate an Obama quote. Redirect whitehouse.gov visits.",
-  "version": "1.12",
+  "version": "1.13",
   "icons": { "128": "sad.png" },
   "background": {
     "scripts": ["bg.js"]
